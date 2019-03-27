@@ -1,0 +1,119 @@
+{
+  "camera": {
+    "type": "perspective",
+    "focal_length": 1,
+    "eye": [0.8,0.8,5],
+    "up": [0,1,0],
+    "look": [-0.2,-0.1,-1],
+    "height": 1,
+    "width": 1.7777777778
+  },
+  "lights":[
+    {
+      "type": "point",
+      "color": [0.3,0.3,0.3],
+      "position": [-0.9,0.9,3]
+    },
+    {
+      "type": "point",
+      "color": [0.5,0.5,0.5],
+      "position": [2,0,0]
+    },
+    {
+      "type": "point",
+      "color": [0.5,0.4,0.7],
+      "position": [-2,0,0]
+    },
+    {
+      "type": "point",
+      "color": [0.2,0.2,0.4],
+      "position": [0,1,4]
+    },
+    {
+      "type": "point",
+      "color": [0.5,0.5,0.5],
+      "position": [0,1,-4]
+    },
+    {
+      "type": "point",
+      "color": [0.5, 0.5, 0.5],
+      "position": [1, -5, 2]
+    },
+    {
+      "type": "directional",
+      "direction": [-1, -0.5, -3],
+      "color": [0.5, 0.5, 0.5]
+    }
+  ],
+  "materials": [
+    {
+      "name": "red metal",
+      "ka": [0.894118,0.101961,0.109804],
+      "kd": [0.894118,0.101961,0.109804],
+      "ks": [0.894118,0.101961,0.109804],
+      "km": [0,0,0],
+      "phong_exponent": 500
+    },
+    {
+      "name": "matte red",
+      "ka": [0.894118,0.101961,0.109804],
+      "kd": [0.894118,0.101961,0.109804],
+      "ks": [0.894118,0.101961,0.109804],
+      "km": [0.5,0.5,0.5],
+      "phong_exponent": 300
+    },
+    {
+      "name": "matte gray",
+      "ka": [0.90, 0.90, 0.90],
+      "kd": [0.95, 0.95, 0.95],
+      "ks": [0.3,0.3,0.3],
+      "km": [0.05,0.05,0.05],
+      "phong_exponent": 200
+    },
+    {
+      "name": "mirror",
+      "ka": [0.1, 0.1, 0.1],
+      "kd": [0.0, 0.0, 0.0],
+      "ks": [1, 1, 1],
+      "km": [1, 1, 1],
+      "phong_exponent": 5000
+    }
+  ],
+  "objects": [
+    {
+      "type": "soup",
+      "material": "matte gray",
+      "stl": "test.stl"
+    },
+    {
+      "type": "plane",
+      "material": "mirror",
+      "point": [0,2,-6],
+      "normal": [0,1,3]
+    },
+    {
+      "type": "plane",
+      "material": "mirror",
+      "point": [2,0,0],
+      "normal": [-1,0,0]
+    },
+    {
+      "type": "plane",
+      "material": "mirror",
+      "point": [-2,0,0],
+      "normal": [1,0,0]
+    },
+    {
+      "type": "sphere",
+      "material": "red metal",
+      "center": [0.35, 0.25, 0.76],
+      "radius": 0.1
+    },
+    {
+      "type": "sphere",
+      "material": "red metal",
+      "center": [-0.35, 0.25, 0.76],
+      "radius": 0.1
+    }
+  ]
+}
