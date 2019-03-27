@@ -1,5 +1,5 @@
 # Computer-Graphics-Assignments
-This is a repository to store and show my work for CSC418
+This is a repository to store and show my work for a 4th year UofT computer graphics course.
 
 Each assignment's individual README outline's some background on the material followed by the assignment tasks and contraints.
 
