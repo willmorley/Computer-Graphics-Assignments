@@ -1,0 +1,31 @@
+// Hard-code each tessellation level to 5.
+//
+// Layout:
+//                          indicate that we're dealing with 3 vertices
+//                          (triangles) as output
+layout (vertices = 3) out;
+// Inputs:
+//                    3-long array of this triangle's corners' 3D vertex
+//                    positions
+in vec4 pos_cs_in[];
+// Outputs:
+//                     3-long array of this triangle's corners' 3D vertex
+//                     positions (should be set to input using gl_InvocationID)
+out vec4 pos_es_in[];
+void main()
+{
+  float num_edges = 5.0;
+
+  // The number of new edges each input should split into
+  gl_TessLevelOuter[0] = num_edges;
+  gl_TessLevelOuter[1] = num_edges;
+  gl_TessLevelOuter[2] = num_edges;
+
+  // The number of edges to place toward center of patch
+  gl_TessLevelInner[0] = num_edges;
+  gl_TessLevelInner[1] = num_edges;
+
+  // send points to tes
+  pos_es_in[gl_InvocationID] = pos_cs_in[gl_InvocationID];
+}
+
